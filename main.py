@@ -7,4 +7,17 @@ template = """
 Your are an expert in answering question about a pizza restaurant
 
 here are some relevant reviews: {reviews}
+here is the questio to answer: {queestion}
 """
+
+prompt = ChatPromptTemplate.from_template(template)
+chain = prompt | model
+
+
+while True:
+    question = input("ask your question (q to quit): ")
+    if question == "q":
+        break
+
+result = chain.invoke({"review": [], "question": question})
+print(result)
