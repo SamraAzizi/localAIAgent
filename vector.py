@@ -9,3 +9,8 @@ embeddings = OllamaEmbeddings(model="mxbai-embed-large")
 
 db_location = "./chrome_langchain_db"
 add_documents = not os.path.exists(db_location)
+if add_documents:
+    documents = []
+    ids = []
+    
+    for i, row in df.iterrows():
