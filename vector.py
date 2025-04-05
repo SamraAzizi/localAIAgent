@@ -14,3 +14,7 @@ if add_documents:
     ids = []
     
     for i, row in df.iterrows():
+        document = Document(
+            page_content=row["Title"] + " " + row["Review"],
+            metadata={"ratung": row["Rating"],"date":row{"Date"}},
+        )
