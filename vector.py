@@ -16,5 +16,14 @@ if add_documents:
     for i, row in df.iterrows():
         document = Document(
             page_content=row["Title"] + " " + row["Review"],
-            metadata={"ratung": row["Rating"],"date":row{"Date"}},
+            metadata={"rating": row["Rating"],"date":row{"Date"}},
+            id=str(i)
+
         )
+        ids.append(str(i))
+        documents.append(document)
+
+vector_store = Chroma(
+    collection_name ="restaurant_reviews",
+    persist_directory=db_location
+)
