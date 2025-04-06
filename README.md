@@ -7,3 +7,16 @@ This project is a simple conversational chatbot that answers questions about a p
 - **ChromaDB** for storing and retrieving relevant reviews using semantic similarity.
 
 ## 📁 Project Structure
+├── main.py # Main chatbot loop 
+├── vector.py # Vector store setup using Chroma and Ollama embeddings 
+├── realistic_restaurant_reviews.csv # Dataset of restaurant reviews 
+├── chrome_langchain_db/ # Folder where vector DB is persisted 
+└── README.md # This file
+
+
+## 🛠 Requirements
+
+Install the dependencies using pip:
+
+```bash
+pip install langchain langchain-core langchain-ollama langchain-chroma pandas
