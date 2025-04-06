@@ -63,3 +63,10 @@ Ask your questions about the pizza restaurant like:
 ```bash
 ask your question (q to quit): What do people think about the service?
 ```
+
+## How it Works
+- Embeddings: Reviews are embedded using mxbai-embed-large.
+- Vector Store: Embedded documents are stored and retrieved using Chroma.
+- Prompting: A custom prompt combines retrieved reviews and the user’s question.
+- LLM: llama2 is used to generate a relevant answer.
+
