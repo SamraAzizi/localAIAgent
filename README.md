@@ -70,3 +70,13 @@ ask your question (q to quit): What do people think about the service?
 - Prompting: A custom prompt combines retrieved reviews and the user’s question.
 - LLM: llama2 is used to generate a relevant answer.
 
+## Notes
+- This app currently uses local Ollama models, so no API key is needed.
+- The vector store is saved in chrome_langchain_db/, so embeddings are not recalculated every time.
+- You can extend this by using a web interface or adding structured question understanding.
+
+## Example Questions
+- "Are the pizzas good here?"
+- "How is the ambiance?"
+- "Do people like the service?"
+- "Is the restaurant clean?"
